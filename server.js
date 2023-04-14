@@ -3,6 +3,8 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const fileUpload = require("express-fileupload");
 const { readdirSync } = require("fs");
+const socketServer = require("./socketServer");
+
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -18,6 +20,9 @@ app.use(
 //routes
 readdirSync("./routes").map((r) => app.use("/", require("./routes/" + r)));
 
+const server = http.createServer(app);
+socketServer.registerSocketServer(server);
+
 //database
 mongoose.set("strictQuery", true);
 mongoose
@@ -31,6 +36,6 @@ mongoose
   .catch((err) => console.log("error connecting to mongodb", err));
 
 const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`server is running on port ${PORT}..`);
 });

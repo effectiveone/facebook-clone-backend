@@ -1,9 +1,11 @@
 const mongoose = require("mongoose");
 
 const { ObjectId } = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 const userSchema = mongoose.Schema(
   {
+    friends: [{ type: Schema.Types.Object, ref: "User" }],
     first_name: {
       type: String,
       required: [true, "first name is required"],
