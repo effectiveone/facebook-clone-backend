@@ -4,7 +4,7 @@ const {
   validateUsername,
 } = require("../helpers/validation");
 const User = require("../models/User.model");
-const FriendInvitation = require("../friendInvitation");
+const FriendInvitation = require("../models/friendInvitation");
 const friendsUpdates = require("../socketHandlers/updates/friends");
 
 const Post = require("../models/Post");

@@ -1,9 +1,11 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const http = require("http");
 const cors = require("cors");
 const fileUpload = require("express-fileupload");
 const { readdirSync } = require("fs");
 const socketServer = require("./socketServer");
+const friendInvitationRoutes = require("./routes/friendInvitationRoutes");
 
 const dotenv = require("dotenv");
 dotenv.config();
@@ -18,7 +20,13 @@ app.use(
 );
 
 //routes
-readdirSync("./routes").map((r) => app.use("/", require("./routes/" + r)));
+// readdirSync("./routes").map((r) => app.use("/", require("./routes/" + r)));
+readdirSync("./routes")
+  .filter((file) => file !== "friendInvitationRoutes.js")
+  .map((file) => {
+    app.use("/", require("./routes/" + file));
+  });
+app.use("/api/friend-invitation", friendInvitationRoutes);
 
 const server = http.createServer(app);
 socketServer.registerSocketServer(server);

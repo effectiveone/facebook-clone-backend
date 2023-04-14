@@ -25,7 +25,7 @@ const {
   getSearchHistory,
   removeFromSearch,
   getFriendsPageInfos,
-} = require("../controllers/user");
+} = require("../controllers/user.controller");
 const { authUser } = require("../middlwares/auth");
 
 const router = express.Router();
