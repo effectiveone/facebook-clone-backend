@@ -26,15 +26,15 @@ router.post(
 
 router.post(
   "/accept",
-  // authUser,
-  validator.body(inviteDecisionSchema),
+  authUser,
+  // validator.body(inviteDecisionSchema),
   postAccept
 );
 
 router.post(
   "/reject",
   authUser,
-  validator.body(inviteDecisionSchema),
+  // validator.body(inviteDecisionSchema),
   postReject
 );
 

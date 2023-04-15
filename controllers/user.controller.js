@@ -633,7 +633,10 @@ exports.getFriendsPageInfos = async (req, res) => {
 
     const sentRequests = await FriendInvitation.find({
       senderId: mongoose.Types.ObjectId(user._id),
-    }).populate("receiverId", "first_name last_name picture username");
+    }).populate(
+      "receiverId",
+      "first_name last_name picture username _id: invitationID"
+    );
 
     const receivedRequests = await FriendInvitation.find({
       receiverId: mongoose.Types.ObjectId(user._id),

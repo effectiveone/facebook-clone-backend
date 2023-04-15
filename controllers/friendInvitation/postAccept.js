@@ -3,16 +3,18 @@ const User = require("../../models/User.model");
 const friendsUpdates = require("../../socketHandlers/updates/friends");
 
 const postAccept = async (req, res) => {
+  console.log("uzywam__postAccept");
   try {
-    const { id } = req.body;
-
-    const invitation = await FriendInvitation.findById(id);
-
+    const { senderId, receiverId } = req.body;
+    console.log("postAccept__req.body", req.body);
+    const invitation = await FriendInvitation.findOne({
+      senderId: senderId,
+      receiverId: receiverId,
+    });
+    console.log("invitation", invitation);
     if (!invitation) {
       return res.status(401).send("Error occured. Please try again");
     }
-
-    const { senderId, receiverId } = invitation;
 
     // add friends to both users
     const senderUser = await User.findById(senderId);
@@ -25,7 +27,7 @@ const postAccept = async (req, res) => {
     await receiverUser.save();
 
     // delete invitation
-    await FriendInvitation.findByIdAndDelete(id);
+    await FriendInvitation.findByIdAndDelete(invitation._id);
 
     // update list of the friends if the users are online
     friendsUpdates.updateFriends(senderId.toString());
