@@ -5,11 +5,12 @@ const friendsUpdates = require("../../socketHandlers/updates/friends");
 const postInvite = async (req, res) => {
   const { targetMailAddress } = req.body;
 
-  const { userId, mail } = req.user;
+  const { _id: userId, email } = req.user;
 
+  console.log(`target:${targetMailAddress} mail: ${email}`);
   // check if friend that we would like to invite is not user
 
-  if (mail.toLowerCase() === targetMailAddress.toLowerCase()) {
+  if (email?.toLowerCase() === targetMailAddress?.toLowerCase()) {
     return res
       .status(409)
       .send("Sorry. You cannot become friend with yourself");

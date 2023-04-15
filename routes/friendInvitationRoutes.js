@@ -20,13 +20,13 @@ const inviteDecisionSchema = Joi.object({
 router.post(
   "/invite",
   authUser,
-  validator.body(postFriendInvitationSchema),
+  // validator.body(postFriendInvitationSchema),
   postInvite
 );
 
 router.post(
   "/accept",
-  authUser,
+  // authUser,
   validator.body(inviteDecisionSchema),
   postAccept
 );

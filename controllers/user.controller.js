@@ -88,6 +88,7 @@ exports.register = async (req, res) => {
       first_name: user?.first_name,
       last_name: user?.last_name,
       token: token,
+      email: user?.email,
       verified: user?.verified,
       message: "Register Success ! please activate your email to start",
     });
@@ -242,8 +243,13 @@ exports.changePassword = async (req, res) => {
 exports.getProfile = async (req, res) => {
   try {
     const { username } = req.params;
-    const user = await User.findById(req.user.id);
     const profile = await User.findOne({ username }).select("-password");
+    const user = await User.findById(profile._id).select("-password");
+
+    if (!user) {
+      return res.status(400).json({ message: "Błąd: użytkownik nie istnieje" });
+    }
+
     const friendship = {
       friends: false,
       following: false,
@@ -619,18 +625,24 @@ exports.removeFromSearch = async (req, res) => {
   }
 };
 exports.getFriendsPageInfos = async (req, res) => {
+  console.log("uzywam_getFriendsPageInfos");
   try {
-    const user = await User.findById(req.user.id)
-      .select("friends requests")
-      .populate("friends", "first_name last_name picture username")
-      .populate("requests", "first_name last_name picture username");
-    const sentRequests = await User.find({
-      requests: mongoose.Types.ObjectId(req.user.id),
-    }).select("first_name last_name picture username");
+    const user = await User.findById(req.user._id)
+      .select("friends")
+      .populate("friends", "first_name last_name picture username");
+
+    const sentRequests = await FriendInvitation.find({
+      senderId: mongoose.Types.ObjectId(user._id),
+    }).populate("receiverId", "first_name last_name picture username");
+
+    const receivedRequests = await FriendInvitation.find({
+      receiverId: mongoose.Types.ObjectId(user._id),
+    }).populate("senderId", "first_name last_name picture username");
+
     res.json({
       friends: user.friends,
-      requests: user.requests,
       sentRequests,
+      receivedRequests,
     });
   } catch (error) {
     res.status(500).json({ message: error.message });

@@ -3,6 +3,7 @@ const FriendInvitation = require("../../models/friendInvitation");
 const serverStore = require("../../serverStore");
 
 const updateFriendsPendingInvitations = async (userId) => {
+  console.log("updateFriendsPendingInvitations", userId);
   try {
     const pendingInvitations = await FriendInvitation.find({
       receiverId: userId,

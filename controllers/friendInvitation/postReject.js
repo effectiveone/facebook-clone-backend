@@ -4,7 +4,9 @@ const friendsUpdates = require("../../socketHandlers/updates/friends");
 const postReject = async (req, res) => {
   try {
     const { id } = req.body;
-    const { userId } = req.user;
+    const { _id } = req.user;
+    console.log("id", id);
+    console.log("_id", _id);
 
     // remove that invitation from friend invitations collection
     const invitationExists = await FriendInvitation.exists({ _id: id });
@@ -14,7 +16,7 @@ const postReject = async (req, res) => {
     }
 
     // update pending invitations
-    friendsUpdates.updateFriendsPendingInvitations(userId);
+    friendsUpdates.updateFriendsPendingInvitations(_id);
 
     return res.status(200).send("Invitation succesfully rejected");
   } catch (err) {
