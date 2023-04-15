@@ -22,17 +22,17 @@ const registerSocketServer = (server) => {
   serverStore.setSocketServerInstance(io);
 
   io.use((socket, next) => {
+    console.log("socket", socket);
     authSocket(socket, next);
   });
 
   const emitOnlineUsers = () => {
     const onlineUsers = serverStore.getOnlineUsers();
+    console.log("onlineUsers", onlineUsers);
     io.emit("online-users", { onlineUsers });
   };
-
   io.on("connection", (socket) => {
     console.log("user connected");
-    console.log(socket.id);
 
     newConnectionHandler(socket, io);
     emitOnlineUsers();

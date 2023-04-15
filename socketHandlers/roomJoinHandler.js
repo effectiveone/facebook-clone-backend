@@ -5,7 +5,7 @@ const roomJoinHandler = (socket, data) => {
   const { roomId } = data;
 
   const participantDetails = {
-    userId: socket.user.userId,
+    userId: socket.user.id,
     socketId: socket.id,
   };
 

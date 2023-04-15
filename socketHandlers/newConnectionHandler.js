@@ -7,14 +7,14 @@ const newConnectionHandler = async (socket, io) => {
 
   serverStore.addNewConnectedUser({
     socketId: socket.id,
-    userId: userDetails.userId,
+    userId: userDetails.id,
   });
 
   // update pending friends invitations list
-  friendsUpdate.updateFriendsPendingInvitations(userDetails.userId);
+  friendsUpdate.updateFriendsPendingInvitations(userDetails.id);
 
   // update friends list
-  friendsUpdate.updateFriends(userDetails.userId);
+  friendsUpdate.updateFriends(userDetails.id);
 
   setTimeout(() => {
     roomsUpdate.updateRooms(socket.id);

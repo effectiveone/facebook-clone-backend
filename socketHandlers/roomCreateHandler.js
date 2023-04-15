@@ -4,7 +4,7 @@ const roomsUpdates = require("./updates/rooms");
 const roomCreateHandler = (socket) => {
   console.log("handling room create event");
   const socketId = socket.id;
-  const userId = socket.user.userId;
+  const userId = socket.user.id;
 
   const roomDetails = serverStore.addNewActiveRoom(userId, socketId);
 
