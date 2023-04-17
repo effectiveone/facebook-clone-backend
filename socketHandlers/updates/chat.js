@@ -30,8 +30,9 @@ const updateChatHistory = async (
     // if yes emit to them update of messages
 
     conversation.participants.forEach((userId) => {
+      console.log("conversation__userId", userId);
       const activeConnections = serverStore.getActiveConnections(
-        userId.toString()
+        userId?.toString()
       );
 
       activeConnections.forEach((socketId) => {

@@ -9,6 +9,11 @@ const directMessageHandler = async (socket, data) => {
     const userId = socket.user;
     const { receiverUserId, content } = data;
 
+    console.log(`receiverUserId:${receiverUserId}
+content:${content}
+userId:${userId}
+`);
+
     // create new message
     const message = await Message.create({
       content: content,
