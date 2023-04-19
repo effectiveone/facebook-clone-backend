@@ -6,9 +6,8 @@ const fileUpload = require("express-fileupload");
 const { readdirSync } = require("fs");
 const socketServer = require("./socketServer");
 const friendInvitationRoutes = require("./routes/friendInvitationRoutes");
-
-const dotenv = require("dotenv");
-dotenv.config();
+const config = require("./config");
+const logger = require("./logger");
 
 const app = express();
 app.use(express.json());
@@ -19,31 +18,34 @@ app.use(
   })
 );
 
-//routes
-// readdirSync("./routes").map((r) => app.use("/", require("./routes/" + r)));
+// Load routes
 readdirSync("./routes")
   .filter((file) => file !== "friendInvitationRoutes.js")
-  .map((file) => {
+  .forEach((file) => {
     app.use("/", require("./routes/" + file));
   });
 app.use("/api/friend-invitation", friendInvitationRoutes);
 
+// Create HTTP server
 const server = http.createServer(app);
 socketServer.registerSocketServer(server);
 
-//database
+// Connect to database
 mongoose.set("strictQuery", true);
 mongoose
-  .connect(process.env.DATABASE_URL, {
+  .connect(config.dbUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(() => {
-    console.log("database connected successfully");
+    logger.info("Database connected successfully");
   })
-  .catch((err) => console.log("error connecting to mongodb", err));
+  .catch((err) => {
+    logger.error("Error connecting to MongoDB", err);
+    process.exit(1);
+  });
 
-const PORT = process.env.PORT || 8080;
-server.listen(PORT, () => {
-  console.log(`server is running on port ${PORT}..`);
+// Start server
+server.listen(config.port, () => {
+  logger.info(`Server is running on port ${config.port}`);
 });

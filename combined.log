@@ -1,0 +1,2 @@
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2023-04-19T05:54:38.140Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2023-04-19T05:54:38.293Z"}
