@@ -1,65 +1,27 @@
-const cloudinary = require("cloudinary");
-const fs = require("fs");
-const path = require("path");
-cloudinary.config({
-  cloud_name: process.env.CLOUD_NAME,
-  api_key: process.env.CLOUD_API_KEY,
-  api_secret: process.env.CLOUD_API_SECRET,
-});
+const logger = require("../helpers/logger");
+const cloudinary = require("cloudinary").v2;
+
 exports.uploadImages = async (req, res) => {
   try {
-    const { path } = req.body;
-    let files = Object.values(req.files).flat();
-    let images = [];
-    for (const file of files) {
-      const url = await uploadToCloudinary(file, path);
-      images.push(url);
-      removeTmp(file.tempFilePath);
-    }
-    res.json(images);
+    logger.info(`New image upload request received from user ${req.user.id}`);
+    const images = req.files;
+
+    const result = await Promise.all(
+      images.map((image) =>
+        cloudinary.uploader.upload(image.path, {
+          folder: "facebook",
+          use_filename: true,
+          unique_filename: false,
+        })
+      )
+    );
+
+    logger.info(`Images uploaded successfully by user ${req.user.id}`);
+    res.json(result);
   } catch (error) {
+    logger.error(
+      `Error occurred while uploading images for user ${req.user.id}: ${error.message}`
+    );
     return res.status(500).json({ message: error.message });
   }
-};
-
-exports.listImages = async (req, res) => {
-  const { path, sort, max } = req.body;
-
-  cloudinary.v2.search
-    .expression(`${path}`)
-    .sort_by("created_at", `${sort}`)
-    .max_results(max)
-    .execute()
-    .then((result) => {
-      res.json(result);
-    })
-    .catch((err) => {
-      console.log(err.error.message);
-    });
-};
-
-const uploadToCloudinary = async (file, path) => {
-  return new Promise((resolve, reject) => {
-    cloudinary.v2.uploader.upload(
-      file.tempFilePath,
-      {
-        folder: path,
-      },
-      (err, res) => {
-        if (err) {
-          removeTmp(file.tempFilePath);
-          reject({ message: "Upload image failed." });
-        }
-        resolve({
-          url: res.secure_url,
-        });
-      }
-    );
-  });
-};
-
-const removeTmp = (path) => {
-  fs.unlink(path, (err) => {
-    if (err) throw err;
-  });
 };

@@ -1,6 +1,9 @@
 const React = require("../models/React");
 const User = require("../models/User.model");
 const mongoose = require("mongoose");
+const { generateReactsArray } = require("../helpers/generateReacts");
+const logger = require("../logger");
+
 exports.reactPost = async (req, res) => {
   try {
     const { postId, react } = req.body;
@@ -15,16 +18,21 @@ exports.reactPost = async (req, res) => {
         reactBy: req.user.id,
       });
       await newReact.save();
+      logger.info(`New reaction added for post ${postId}`);
     } else {
       if (check.react == react) {
         await React.findByIdAndRemove(check._id);
+        logger.info(`Reaction removed for post ${postId}`);
       } else {
         await React.findByIdAndUpdate(check._id, {
           react: react,
         });
+        logger.info(`Reaction updated for post ${postId}`);
       }
     }
+    res.sendStatus(200);
   } catch (error) {
+    logger.error(`Error in reactPost: ${error.message}`);
     return res.status(500).json({ message: error.message });
   }
 };
@@ -32,46 +40,7 @@ exports.reactPost = async (req, res) => {
 exports.getReacts = async (req, res) => {
   try {
     const reactsArray = await React.find({ postRef: req.params.id });
-
-    /*
-    const check1 = reacts.find(
-      (x) => x.reactBy.toString() == req.user.id
-    )?.react;
-    */
-    const newReacts = reactsArray.reduce((group, react) => {
-      let key = react["react"];
-      group[key] = group[key] || [];
-      group[key].push(react);
-      return group;
-    }, {});
-
-    const reacts = [
-      {
-        react: "like",
-        count: newReacts.like ? newReacts.like.length : 0,
-      },
-      {
-        react: "love",
-        count: newReacts.love ? newReacts.love.length : 0,
-      },
-      {
-        react: "haha",
-        count: newReacts.haha ? newReacts.haha.length : 0,
-      },
-      {
-        react: "sad",
-        count: newReacts.sad ? newReacts.sad.length : 0,
-      },
-      {
-        react: "wow",
-        count: newReacts.wow ? newReacts.wow.length : 0,
-      },
-      {
-        react: "angry",
-        count: newReacts.angry ? newReacts.angry.length : 0,
-      },
-    ];
-
+    const reacts = generateReactsArray(reactsArray);
     const check = await React.findOne({
       postRef: req.params.id,
       reactBy: req.user.id,
@@ -87,6 +56,7 @@ exports.getReacts = async (req, res) => {
       checkSaved: checkSaved ? true : false,
     });
   } catch (error) {
+    logger.error(`Error in getReacts: ${error.message}`);
     return res.status(500).json({ message: error.message });
   }
 };

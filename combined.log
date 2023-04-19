@@ -1,2 +1,23 @@
 {"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2023-04-19T05:54:38.140Z"}
 {"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2023-04-19T05:54:38.293Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2023-04-19T06:03:07.476Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2023-04-19T06:03:07.889Z"}
+{"level":"info","message":"New post created","service":"my-app","timestamp":"2023-04-19T06:03:20.446Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2023-04-19T06:19:21.364Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2023-04-19T06:19:21.667Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2023-04-19T06:22:13.987Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2023-04-19T06:22:14.131Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2023-04-19T06:26:03.887Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2023-04-19T06:26:04.138Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2023-04-19T06:26:12.588Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2023-04-19T06:26:13.077Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2023-04-19T06:26:38.415Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2023-04-19T06:26:38.471Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2023-04-19T06:29:07.110Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2023-04-19T06:29:07.233Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2023-04-19T06:29:24.427Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2023-04-19T06:29:24.508Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2023-04-19T06:34:27.680Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2023-04-19T06:34:27.841Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2023-04-19T07:22:04.251Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2023-04-19T07:22:04.415Z"}

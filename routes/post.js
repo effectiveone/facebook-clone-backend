@@ -5,7 +5,7 @@ const {
   comment,
   savePost,
   deletePost,
-} = require("../controllers/post");
+} = require("../controllers/postController");
 const { authUser } = require("../middlwares/auth");
 
 const router = express.Router();

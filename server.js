@@ -6,7 +6,7 @@ const fileUpload = require("express-fileupload");
 const { readdirSync } = require("fs");
 const socketServer = require("./socketServer");
 const friendInvitationRoutes = require("./routes/friendInvitationRoutes");
-const config = require("./config");
+const { config } = require("./config");
 const logger = require("./logger");
 
 const app = express();
