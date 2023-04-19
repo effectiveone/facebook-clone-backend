@@ -1,66 +1,89 @@
 const User = require("../models/User.model");
+const logger = require("../logger");
 
-exports.search = async (req, res) => {
+exports.searchUsers = async (req, res) => {
   try {
     const searchTerm = req.params.searchTerm;
-    const results = await User.find({ $text: { $search: searchTerm } }).select(
-      "first_name last_name username picture"
+    const users = await User.find({ $text: { $search: searchTerm } }).select(
+      "firstName lastName username picture"
     );
-    res.json(results);
+    logger.info(`User ${req.user.id} searched for ${searchTerm}`);
+    res.json(users);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    logger.error(`Error searching users: ${error}`);
+    res.status(500).json({ message: "Error searching users" });
   }
 };
-exports.addToSearchHistory = async (req, res) => {
+
+exports.addSearchToHistory = async (req, res) => {
   try {
-    const { searchUser } = req.body;
+    const { searchedUser } = req.body;
     const search = {
-      user: searchUser,
+      user: searchedUser,
       createdAt: new Date(),
     };
     const user = await User.findById(req.user.id);
-    const check = user.search.find((x) => x.user.toString() === searchUser);
-    if (check) {
+    const existingSearch = user.searches.find(
+      (s) => s.user.toString() === searchedUser
+    );
+    if (existingSearch) {
       await User.updateOne(
         {
           _id: req.user.id,
-          "search._id": check._id,
+          "searches._id": existingSearch._id,
         },
         {
-          $set: { "search.$.createdAt": new Date() },
+          $set: { "searches.$.createdAt": new Date() },
         }
       );
     } else {
       await User.findByIdAndUpdate(req.user.id, {
         $push: {
-          search,
+          searches: search,
         },
       });
     }
+    logger.info(`User ${req.user.id} added search for user ${searchedUser}`);
+    res.status(200).json({ message: "Search added to history" });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    logger.error(`Error adding search to history: ${error}`);
+    res.status(500).json({ message: "Error adding search to history" });
   }
 };
+
 exports.getSearchHistory = async (req, res) => {
   try {
-    const results = await User.findById(req.user.id)
-      .select("search")
-      .populate("search.user", "first_name last_name username picture");
-    res.json(results.search);
+    const user = await User.findById(req.user.id).populate(
+      "searches.user",
+      "firstName lastName username picture"
+    );
+    const searchHistory = user.searches.map((search) => {
+      return {
+        user: search.user,
+        createdAt: search.createdAt,
+      };
+    });
+    logger.info(`User ${req.user.id} retrieved search history`);
+    res.status(200).json(searchHistory);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    logger.error(`Error retrieving search history: ${error}`);
+    res.status(500).json({ message: "Error retrieving search history" });
   }
 };
-exports.removeFromSearch = async (req, res) => {
+
+exports.removeSearchFromHistory = async (req, res) => {
   try {
-    const { searchUser } = req.body;
+    const { searchedUser } = req.body;
     await User.updateOne(
       {
         _id: req.user.id,
       },
-      { $pull: { search: { user: searchUser } } }
+      { $pull: { searches: { user: searchedUser } } }
     );
+    logger.info(`User ${req.user.id} removed search for user ${searchedUser}`);
+    res.status(200).json({ message: "Search removed from history" });
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    logger.error(`Error removing search from history: ${error}`);
+    res.status(500).json({ message: "Error removing search from history" });
   }
 };
