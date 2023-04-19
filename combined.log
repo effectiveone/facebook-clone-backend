@@ -37,3 +37,11 @@
 {"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2023-04-19T07:50:14.139Z"}
 {"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2023-04-19T07:52:53.417Z"}
 {"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2023-04-19T07:52:53.482Z"}
+{"level":"info","message":"Profile retrieved successfully","service":"my-app","timestamp":"2023-04-19T11:54:50.389Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2023-04-19T11:54:53.856Z"}
+{"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2023-04-19T12:20:50.223Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2023-04-19T12:20:50.260Z"}
+{"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2023-04-19T13:34:11.816Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2023-04-19T13:34:11.897Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2023-04-19T14:05:06.194Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2023-04-19T14:05:11.052Z"}
