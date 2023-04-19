@@ -45,3 +45,12 @@
 {"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2023-04-19T13:34:11.897Z"}
 {"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2023-04-19T14:05:06.194Z"}
 {"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2023-04-19T14:05:11.052Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2023-04-19T14:22:30.924Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2023-04-19T14:22:31.276Z"}
+{"level":"info","message":"User 643a79fd9771cd15a9aca5d1 searched for kami","service":"my-app","timestamp":"2023-04-19T14:23:17.212Z"}
+{"level":"info","message":"User 643a79fd9771cd15a9aca5d1 searched for ka","service":"my-app","timestamp":"2023-04-19T14:23:17.217Z"}
+{"level":"info","message":"User 643a79fd9771cd15a9aca5d1 searched for k","service":"my-app","timestamp":"2023-04-19T14:23:17.221Z"}
+{"level":"info","message":"User 643a79fd9771cd15a9aca5d1 searched for kam","service":"my-app","timestamp":"2023-04-19T14:23:17.223Z"}
+{"level":"info","message":"User 643a79fd9771cd15a9aca5d1 searched for kamil","service":"my-app","timestamp":"2023-04-19T14:23:17.265Z"}
+{"level":"info","message":"Profile retrieved successfully","service":"my-app","timestamp":"2023-04-19T14:23:24.259Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2023-04-19T14:23:32.254Z"}

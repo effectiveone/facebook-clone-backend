@@ -5,7 +5,7 @@ const {
   login,
   sendEmailVerification,
   findUserByEmail,
-  sendResetPasswordCode,
+  sendPasswordResetCode,
   validateResetCode,
   changePassword,
 } = require("../controllers/userController");
@@ -14,11 +14,11 @@ const { authUser } = require("../middlwares/auth");
 const router = express.Router();
 
 router.post("/register", register);
-router.post("/activate", authUser, activateAccount);
 router.post("/login", login);
+router.post("/activate", authUser, activateAccount);
 router.post("/sendVerification", authUser, sendEmailVerification);
 router.post("/findUser", findUserByEmail);
-router.post("/sendResetPasswordCode", sendResetPasswordCode);
+router.post("/sendResetPasswordCode", sendPasswordResetCode);
 router.post("/validateResetCode", validateResetCode);
 router.post("/changePassword", changePassword);
 
