@@ -2,17 +2,17 @@ const {
   validateEmail,
   validateLength,
   validateUsername,
-} = require("../helpers/validation");
-const User = require("../models/User.model");
-const Code = require("../models/Code");
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
-const { generateToken } = require("../helpers/tokens");
-const { sendVerificationEmail, sendResetCode } = require("../helpers/mailer");
-const generateCode = require("../helpers/generateCode");
-const mongoose = require("mongoose");
+} = require('../helpers/validation');
+const User = require('../models/User.model');
+const Code = require('../models/Code');
+const jwt = require('jsonwebtoken');
+const argon2 = require('argon2');
+const { generateToken } = require('../helpers/tokens');
+const { sendVerificationEmail, sendResetCode } = require('../helpers/mailer');
+const generateCode = require('../helpers/generateCode');
+const mongoose = require('mongoose');
 
-const logger = require("../logger");
+const logger = require('../logger');
 
 exports.register = async (req, res) => {
   try {
@@ -31,7 +31,7 @@ exports.register = async (req, res) => {
     if (!validateEmail(email)) {
       logger.error(`Invalid email address: ${email}`);
       return res.status(400).json({
-        message: "Invalid email address",
+        message: 'Invalid email address',
       });
     }
 
@@ -40,32 +40,32 @@ exports.register = async (req, res) => {
       logger.warn(`User with email ${email} already exists.`);
       return res.status(400).json({
         message:
-          "This email address already exists, try with a different email address",
+          'This email address already exists, try with a different email address',
       });
     }
 
     if (!validateLength(firstName, 3, 30)) {
       logger.error(`Invalid first name: ${firstName}`);
       return res.status(400).json({
-        message: "First name must be between 3 and 30 characters",
+        message: 'First name must be between 3 and 30 characters',
       });
     }
 
     if (!validateLength(lastName, 3, 30)) {
       logger.error(`Invalid last name: ${lastName}`);
       return res.status(400).json({
-        message: "Last name must be between 3 and 30 characters",
+        message: 'Last name must be between 3 and 30 characters',
       });
     }
 
     if (!validateLength(password, 6, 40)) {
       logger.error(`Invalid password: ${password}`);
       return res.status(400).json({
-        message: "Password must be at least 6 characters long",
+        message: 'Password must be at least 6 characters long',
       });
     }
 
-    const cryptedPassword = await bcrypt.hash(password, 12);
+    const cryptedPassword = await argon2.hash(password, 12);
 
     let tempUsername = firstName + lastName;
     let newUsername = await validateUsername(tempUsername);
@@ -83,12 +83,12 @@ exports.register = async (req, res) => {
 
     const emailVerificationToken = generateToken(
       { id: newUser._id.toString() },
-      "30m"
+      '30m',
     );
     const url = `${process.env.BASE_URL}/activate/${emailVerificationToken}`;
     sendVerificationEmail(newUser?.email, newUser?.firstName, url);
 
-    const token = generateToken({ id: newUser?._id.toString() }, "7d");
+    const token = generateToken({ id: newUser?._id.toString() }, '7d');
 
     logger.info(`User ${newUser.username} registered successfully`);
 
@@ -101,7 +101,7 @@ exports.register = async (req, res) => {
       token,
       email: newUser.email,
       verified: newUser.verified,
-      message: "Registration successful! Please activate your email to start.",
+      message: 'Registration successful! Please activate your email to start.',
     });
   } catch (error) {
     logger.error(`Error occurred during registration: ${error.message}`);
@@ -117,19 +117,19 @@ exports.login = async (req, res) => {
     if (!user) {
       logger.warn(`User not found with email ${email}`);
       return res.status(400).json({
-        message: "The email address you entered is not connected to an account",
+        message: 'The email address you entered is not connected to an account',
       });
     }
 
-    const check = await bcrypt.compare(password, user.password);
+    const check = await argon2.verify(user.password, password);
     if (!check) {
       logger.warn(`Invalid login credentials for user ${user.username}`);
       return res.status(400).json({
-        message: "Invalid credentials. Please try again",
+        message: 'Invalid credentials. Please try again',
       });
     }
 
-    const token = generateToken({ id: user._id.toString() }, "7d");
+    const token = generateToken({ id: user._id.toString() }, '7d');
 
     logger.info(`User ${user.username} logged in successfully`);
 
@@ -151,7 +151,7 @@ exports.login = async (req, res) => {
 exports.sendPasswordResetCode = async (req, res) => {
   try {
     const { emailAddress } = req.body;
-    const user = await User.findOne({ emailAddress }).select("-password");
+    const user = await User.findOne({ emailAddress }).select('-password');
     await VerificationCode.findOneAndRemove({ user: user._id });
     const code = generateCode(5);
     const savedCode = await new VerificationCode({
@@ -160,14 +160,14 @@ exports.sendPasswordResetCode = async (req, res) => {
     }).save();
     sendResetCode(user.emailAddress, user.firstName, code);
     logger.info(
-      `Password reset code sent successfully to user ${user.username}`
+      `Password reset code sent successfully to user ${user.username}`,
     );
     return res.status(200).json({
-      message: "Password reset code has been sent to your email",
+      message: 'Password reset code has been sent to your email',
     });
   } catch (error) {
     logger.error(
-      `Error occurred while sending password reset code: ${error.message}`
+      `Error occurred while sending password reset code: ${error.message}`,
     );
     res.status(500).json({ message: error.message });
   }
@@ -182,7 +182,7 @@ exports.activateAccount = async (req, res) => {
 
     if (validUserId !== user.id) {
       logger.warn(
-        `User ${validUserId} does not have authorization to activate account`
+        `User ${validUserId} does not have authorization to activate account`,
       );
       return res.status(400).json({
         message: "You don't have the authorization to complete this operation.",
@@ -191,19 +191,19 @@ exports.activateAccount = async (req, res) => {
 
     if (checkUser.verified) {
       logger.warn(
-        `User ${checkUser.username} tried to activate an already activated account`
+        `User ${checkUser.username} tried to activate an already activated account`,
       );
       return res
         .status(400)
-        .json({ message: "This email is already activated." });
+        .json({ message: 'This email is already activated.' });
     } else {
       await User.findByIdAndUpdate(user.id, { verified: true });
       logger.info(
-        `User ${checkUser.username} has successfully activated their account`
+        `User ${checkUser.username} has successfully activated their account`,
       );
       return res
         .status(200)
-        .json({ message: "Account has been activated successfully." });
+        .json({ message: 'Account has been activated successfully.' });
     }
   } catch (error) {
     logger.error(`Error occurred while activating account: ${error.message}`);
@@ -217,27 +217,27 @@ exports.sendEmailVerification = async (req, res) => {
     const user = await User.findById(userId);
     if (user.verified === true) {
       logger.warn(
-        `User ${user.username} tried to send verification email for an already activated account`
+        `User ${user.username} tried to send verification email for an already activated account`,
       );
       return res.status(400).json({
-        message: "This account is already activated.",
+        message: 'This account is already activated.',
       });
     }
     const emailVerificationToken = generateToken(
       { id: user._id.toString() },
-      "30m"
+      '30m',
     );
     const verificationUrl = `${process.env.BASE_URL}/activate/${emailVerificationToken}`;
     sendVerificationEmail(user.emailAddress, user.firstName, verificationUrl);
     logger.info(
-      `Verification email sent successfully to user ${user.username}`
+      `Verification email sent successfully to user ${user.username}`,
     );
     return res.status(200).json({
-      message: "Email verification link has been sent to your email.",
+      message: 'Email verification link has been sent to your email.',
     });
   } catch (error) {
     logger.error(
-      `Error occurred while sending email verification: ${error.message}`
+      `Error occurred while sending email verification: ${error.message}`,
     );
     res.status(500).json({ message: error.message });
   }
@@ -246,11 +246,11 @@ exports.sendEmailVerification = async (req, res) => {
 exports.findUserByEmail = async (req, res) => {
   try {
     const { emailAddress } = req.body;
-    const user = await User.findOne({ emailAddress }).select("-password");
+    const user = await User.findOne({ emailAddress }).select('-password');
     if (!user) {
       logger.warn(`User not found with email address ${emailAddress}`);
       return res.status(400).json({
-        message: "Account does not exist.",
+        message: 'Account does not exist.',
       });
     }
     logger.info(`User ${user.username} found by email address`);
@@ -260,7 +260,7 @@ exports.findUserByEmail = async (req, res) => {
     });
   } catch (error) {
     logger.error(
-      `Error occurred while finding user by email: ${error.message}`
+      `Error occurred while finding user by email: ${error.message}`,
     );
     res.status(500).json({ message: error.message });
   }
@@ -274,14 +274,14 @@ exports.validateResetCode = async (req, res) => {
     if (codeFromDb.code !== code) {
       logger.warn(`User ${user.username} provided incorrect reset code`);
       return res.status(400).json({
-        message: "Verification code is wrong..",
+        message: 'Verification code is wrong..',
       });
     }
     logger.info(`User ${user.username} validated reset code successfully`);
-    return res.status(200).json({ message: "ok" });
+    return res.status(200).json({ message: 'ok' });
   } catch (error) {
     logger.error(
-      `Error occurred while validating reset code: ${error.message}`
+      `Error occurred while validating reset code: ${error.message}`,
     );
     res.status(500).json({ message: error.message });
   }
@@ -290,15 +290,15 @@ exports.validateResetCode = async (req, res) => {
 exports.changePassword = async (req, res) => {
   const { emailAddress, password } = req.body;
 
-  const cryptedPassword = await bcrypt.hash(password, 12);
+  const cryptedPassword = await argon2.hash(password, 12);
   await User.findOneAndUpdate(
     { emailAddress },
     {
       password: cryptedPassword,
-    }
+    },
   );
   logger.info(
-    `Password changed successfully for user with email address ${emailAddress}`
+    `Password changed successfully for user with email address ${emailAddress}`,
   );
-  return res.status(200).json({ message: "ok" });
+  return res.status(200).json({ message: 'ok' });
 };

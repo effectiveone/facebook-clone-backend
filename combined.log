@@ -54,3 +54,113 @@
 {"level":"info","message":"User 643a79fd9771cd15a9aca5d1 searched for kamil","service":"my-app","timestamp":"2023-04-19T14:23:17.265Z"}
 {"level":"info","message":"Profile retrieved successfully","service":"my-app","timestamp":"2023-04-19T14:23:24.259Z"}
 {"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2023-04-19T14:23:32.254Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2024-05-05T18:56:25.564Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2025-05-04T17:51:02.348Z"}
+{"errorLabelSet":{},"level":"error","message":"Error connecting to MongoDB connect ECONNREFUSED 127.0.0.1:27017","reason":{"commonWireVersion":0,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"logicalSessionTimeoutMinutes":null,"maxElectionId":null,"maxSetVersion":null,"servers":{"localhost:27017":{"$clusterTime":null,"address":"localhost:27017","arbiters":[],"electionId":null,"error":{"beforeHandshake":false,"errorLabelSet":{}},"hosts":[],"iscryptd":false,"lastUpdateTime":129272688,"lastWriteDate":0,"logicalSessionTimeoutMinutes":null,"maxBsonObjectSize":null,"maxMessageSizeBytes":null,"maxWireVersion":0,"maxWriteBatchSize":null,"me":null,"minRoundTripTime":0,"minWireVersion":0,"passives":[],"primary":null,"roundTripTime":-1,"setName":null,"setVersion":null,"tags":{},"topologyVersion":null,"type":"Unknown"}},"setName":null,"stale":false,"type":"Unknown"},"service":"my-app","stack":"MongooseServerSelectionError: connect ECONNREFUSED 127.0.0.1:27017\n    at _handleConnectionErrors (/appnode/node_modules/mongoose/lib/connection.js:1165:11)\n    at NativeConnection.openUri (/appnode/node_modules/mongoose/lib/connection.js:1096:11)","timestamp":"2025-05-04T17:51:32.426Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2025-05-04T17:56:34.162Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2025-05-04T17:56:34.596Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2025-05-04T17:58:51.091Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2025-05-04T17:58:51.599Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T18:26:52.944Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T18:29:12.402Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T18:29:19.383Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T18:29:45.650Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T18:31:56.297Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T18:35:03.300Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T18:35:29.743Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2025-05-04T18:36:46.369Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2025-05-04T18:36:46.661Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T18:37:35.578Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T18:37:35.740Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T18:37:38.128Z"}
+{"level":"error","message":"Error occurred during registration: User validation failed: bDay: Path `bDay` is required., bMonth: Path `bMonth` is required., bYear: Path `bYear` is required., last_name: last name is required, first_name: first name is required","service":"my-app","timestamp":"2025-05-04T18:39:10.133Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2025-05-04T18:40:14.197Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2025-05-04T18:40:14.605Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T18:40:31.616Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T18:41:25.352Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2025-05-04T18:43:51.512Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2025-05-04T18:43:52.090Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T18:43:53.677Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T18:43:53.932Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T18:43:54.051Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T18:44:30.000Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T18:47:23.382Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2025-05-04T18:48:21.312Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2025-05-04T18:48:21.347Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2025-05-04T18:48:32.389Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2025-05-04T18:48:32.409Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2025-05-04T18:48:50.334Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2025-05-04T18:48:50.355Z"}
+{"level":"info","message":"Test registration attempt with: {\"first_name\":\"Admin\",\"last_name\":\"Test\",\"email\":\"admin@test.pl\",\"password\":\"Admin123!\",\"bYear\":2000,\"bMonth\":5,\"bDay\":15,\"gender\":\"male\",\"username\":\"AdminTest123\"}","service":"my-app","timestamp":"2025-05-04T18:49:13.730Z"}
+{"level":"warn","message":"User not found with email Admin123!@admin.pl","service":"my-app","timestamp":"2025-05-04T18:49:53.984Z"}
+{"level":"error","message":"Error occurred during login: argon2.compare is not a function","service":"my-app","timestamp":"2025-05-04T18:50:05.666Z"}
+{"level":"error","message":"Error occurred during login: argon2.compare is not a function","service":"my-app","timestamp":"2025-05-04T18:50:07.364Z"}
+{"level":"error","message":"Error occurred during login: argon2.compare is not a function","service":"my-app","timestamp":"2025-05-04T18:50:23.750Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2025-05-04T18:52:18.196Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2025-05-04T18:52:18.221Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2025-05-04T18:52:47.704Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2025-05-04T18:52:47.724Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2025-05-04T18:52:54.762Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2025-05-04T18:52:54.773Z"}
+{"level":"info","message":"Test login attempt with email: admin@test.pl","service":"my-app","timestamp":"2025-05-04T18:53:02.386Z"}
+{"level":"info","message":"User admin@test.pl successfully logged in","service":"my-app","timestamp":"2025-05-04T18:53:02.502Z"}
+{"level":"error","message":"Error occurred during login: argon2.compare is not a function","service":"my-app","timestamp":"2025-05-04T18:53:25.232Z"}
+{"level":"error","message":"Error occurred during login: argon2.compare is not a function","service":"my-app","timestamp":"2025-05-04T18:53:45.049Z"}
+{"level":"error","message":"Error occurred during login: argon2.compare is not a function","service":"my-app","timestamp":"2025-05-04T18:54:37.061Z"}
+{"level":"error","message":"Error occurred during login: argon2.compare is not a function","service":"my-app","timestamp":"2025-05-04T18:55:41.536Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2025-05-04T18:56:36.028Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2025-05-04T18:56:36.055Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2025-05-04T18:56:43.305Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2025-05-04T18:56:43.328Z"}
+{"level":"info","message":"User AdminTest123 logged in successfully","service":"my-app","timestamp":"2025-05-04T18:56:45.260Z"}
+{"level":"error","message":"Error retrieving friends page information: Class constructor ObjectId cannot be invoked without 'new'","service":"my-app","timestamp":"2025-05-04T18:56:45.430Z"}
+{"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2025-05-04T18:56:45.536Z"}
+{"level":"info","message":"New post created","service":"my-app","timestamp":"2025-05-04T18:57:06.310Z"}
+{"level":"error","message":"Error in reactPost: Class constructor ObjectId cannot be invoked without 'new'","service":"my-app","timestamp":"2025-05-04T18:57:19.138Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T18:57:45.834Z"}
+{"level":"info","message":"User AdminTest123 logged in successfully","service":"my-app","timestamp":"2025-05-04T18:57:49.730Z"}
+{"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2025-05-04T18:57:49.870Z"}
+{"level":"error","message":"Error retrieving friends page information: Class constructor ObjectId cannot be invoked without 'new'","service":"my-app","timestamp":"2025-05-04T18:57:49.875Z"}
+{"level":"error","message":"Error retrieving friends page information: Class constructor ObjectId cannot be invoked without 'new'","service":"my-app","timestamp":"2025-05-04T18:58:00.382Z"}
+{"level":"error","message":"Error retrieving friends page information: Class constructor ObjectId cannot be invoked without 'new'","service":"my-app","timestamp":"2025-05-04T18:58:04.680Z"}
+{"level":"info","message":"Test registration attempt with: {\"first_name\":\"Testowy\",\"last_name\":\"Uzytkownik\",\"email\":\"testowy@test.pl\",\"password\":\"Test123!\",\"bYear\":2000,\"bMonth\":5,\"bDay\":15,\"gender\":\"male\",\"username\":\"TestUser123\"}","service":"my-app","timestamp":"2025-05-04T18:59:20.193Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T19:05:48.503Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T19:06:28.258Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2025-05-04T19:08:01.738Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2025-05-04T19:08:01.761Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2025-05-04T19:08:08.971Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2025-05-04T19:08:08.991Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2025-05-04T19:08:30.610Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2025-05-04T19:08:30.625Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2025-05-04T19:08:50.821Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2025-05-04T19:08:50.835Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T19:10:56.240Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T19:11:12.832Z"}
+{"level":"error","message":"Error occurred during registration: Cannot read properties of undefined (reading 'length')","service":"my-app","timestamp":"2025-05-04T19:16:19.156Z"}
+{"level":"info","message":"User AdminTest123 logged in successfully","service":"my-app","timestamp":"2025-05-04T19:16:43.975Z"}
+{"level":"error","message":"Error retrieving friends page information: Class constructor ObjectId cannot be invoked without 'new'","service":"my-app","timestamp":"2025-05-04T19:16:45.167Z"}
+{"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2025-05-04T19:16:45.596Z"}
+{"level":"error","message":"Error retrieving friends page information: Class constructor ObjectId cannot be invoked without 'new'","service":"my-app","timestamp":"2025-05-04T19:18:13.212Z"}
+{"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2025-05-04T19:18:13.585Z"}
+{"level":"error","message":"Error retrieving friends page information: Class constructor ObjectId cannot be invoked without 'new'","service":"my-app","timestamp":"2025-05-04T19:19:14.063Z"}
+{"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2025-05-04T19:19:14.413Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2025-05-04T19:22:53.243Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2025-05-04T19:22:53.437Z"}
+{"level":"error","message":"Error retrieving friends page information: Class constructor ObjectId cannot be invoked without 'new'","service":"my-app","timestamp":"2025-05-04T19:25:31.357Z"}
+{"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2025-05-04T19:25:31.472Z"}
+{"level":"info","message":"Test registration attempt - full body: {\"first_name\":\"Konrad\",\"last_name\":\"Gruca\",\"email\":\"konrad@gmail.com\",\"password\":\"szachy1\",\"bYear\":1987,\"bMonth\":5,\"bDay\":4,\"gender\":\"male\",\"username\":\"KonradGruca928\"}","service":"my-app","timestamp":"2025-05-04T19:28:08.937Z"}
+{"level":"info","message":"Password hashed successfully","service":"my-app","timestamp":"2025-05-04T19:28:09.670Z"}
+{"level":"info","message":"Creating user with username: KonradGruca928","service":"my-app","timestamp":"2025-05-04T19:28:09.671Z"}
+{"level":"info","message":"User saved successfully with id: 6817bfc94ae10a1a0db715d8","service":"my-app","timestamp":"2025-05-04T19:28:09.769Z"}
+{"level":"info","message":"Token generated successfully","service":"my-app","timestamp":"2025-05-04T19:28:09.784Z"}
+{"level":"info","message":"Registration completed successfully","service":"my-app","timestamp":"2025-05-04T19:28:09.784Z"}
+{"level":"error","message":"Error retrieving friends page information: Class constructor ObjectId cannot be invoked without 'new'","service":"my-app","timestamp":"2025-05-04T19:28:12.350Z"}
+{"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2025-05-04T19:28:12.387Z"}
+{"level":"info","message":"New post created","service":"my-app","timestamp":"2025-05-04T19:28:20.423Z"}
+{"level":"error","message":"Error retrieving friends page information: Class constructor ObjectId cannot be invoked without 'new'","service":"my-app","timestamp":"2025-05-04T19:28:37.363Z"}
+{"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2025-05-04T19:28:37.465Z"}
+{"level":"info","message":"User 6817bfc94ae10a1a0db715d8 searched for a","service":"my-app","timestamp":"2025-05-04T19:29:02.325Z"}
+{"level":"info","message":"User 6817bfc94ae10a1a0db715d8 searched for ad","service":"my-app","timestamp":"2025-05-04T19:29:02.377Z"}
+{"level":"info","message":"User 6817bfc94ae10a1a0db715d8 searched for adm","service":"my-app","timestamp":"2025-05-04T19:29:02.442Z"}
+{"level":"info","message":"User 6817bfc94ae10a1a0db715d8 searched for admin","service":"my-app","timestamp":"2025-05-04T19:29:02.566Z"}
+{"level":"info","message":"User 6817bfc94ae10a1a0db715d8 searched for admin","service":"my-app","timestamp":"2025-05-04T19:29:02.597Z"}
