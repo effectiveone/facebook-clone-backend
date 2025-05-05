@@ -70,14 +70,14 @@ exports.register = async (req, res) => {
     let tempUsername = firstName + lastName;
     let newUsername = await validateUsername(tempUsername);
     const newUser = await new User({
-      firstName,
-      lastName,
+      first_name: firstName,
+      last_name: lastName,
       email,
       password: cryptedPassword,
       username: newUsername,
-      birthYear,
-      birthMonth,
-      birthDay,
+      bYear: birthYear,
+      bMonth: birthMonth,
+      bDay: birthDay,
       gender,
     }).save();
 
@@ -86,7 +86,7 @@ exports.register = async (req, res) => {
       '30m',
     );
     const url = `${process.env.BASE_URL}/activate/${emailVerificationToken}`;
-    sendVerificationEmail(newUser?.email, newUser?.firstName, url);
+    sendVerificationEmail(newUser?.email, newUser?.first_name, url);
 
     const token = generateToken({ id: newUser?._id.toString() }, '7d');
 
@@ -96,8 +96,8 @@ exports.register = async (req, res) => {
       id: newUser._id,
       username: newUser.username,
       picture: newUser.picture,
-      firstName: newUser.firstName,
-      lastName: newUser.lastName,
+      firstName: newUser.first_name,
+      lastName: newUser.last_name,
       token,
       email: newUser.email,
       verified: newUser.verified,
@@ -137,8 +137,8 @@ exports.login = async (req, res) => {
       id: user._id,
       username: user.username,
       picture: user.picture,
-      firstName: user.firstName,
-      lastName: user.lastName,
+      firstName: user.first_name,
+      lastName: user.last_name,
       token,
       verified: user.verified,
     });
@@ -150,15 +150,21 @@ exports.login = async (req, res) => {
 
 exports.sendPasswordResetCode = async (req, res) => {
   try {
-    const { emailAddress } = req.body;
-    const user = await User.findOne({ emailAddress }).select('-password');
-    await VerificationCode.findOneAndRemove({ user: user._id });
+    const { email } = req.body;
+    const user = await User.findOne({ email }).select('-password');
+    if (!user) {
+      logger.warn(`User not found with email ${email}`);
+      return res.status(400).json({
+        message: 'Account does not exist.',
+      });
+    }
+    await Code.findOneAndRemove({ user: user._id });
     const code = generateCode(5);
-    const savedCode = await new VerificationCode({
+    const savedCode = await new Code({
       code,
       user: user._id,
     }).save();
-    sendResetCode(user.emailAddress, user.firstName, code);
+    sendResetCode(user.email, user.first_name, code);
     logger.info(
       `Password reset code sent successfully to user ${user.username}`,
     );
@@ -228,7 +234,7 @@ exports.sendEmailVerification = async (req, res) => {
       '30m',
     );
     const verificationUrl = `${process.env.BASE_URL}/activate/${emailVerificationToken}`;
-    sendVerificationEmail(user.emailAddress, user.firstName, verificationUrl);
+    sendVerificationEmail(user.email, user.first_name, verificationUrl);
     logger.info(
       `Verification email sent successfully to user ${user.username}`,
     );
@@ -245,17 +251,17 @@ exports.sendEmailVerification = async (req, res) => {
 
 exports.findUserByEmail = async (req, res) => {
   try {
-    const { emailAddress } = req.body;
-    const user = await User.findOne({ emailAddress }).select('-password');
+    const { email } = req.body;
+    const user = await User.findOne({ email }).select('-password');
     if (!user) {
-      logger.warn(`User not found with email address ${emailAddress}`);
+      logger.warn(`User not found with email address ${email}`);
       return res.status(400).json({
         message: 'Account does not exist.',
       });
     }
     logger.info(`User ${user.username} found by email address`);
     return res.status(200).json({
-      emailAddress: user.emailAddress,
+      email: user.email,
       picture: user.picture,
     });
   } catch (error) {
@@ -268,8 +274,8 @@ exports.findUserByEmail = async (req, res) => {
 
 exports.validateResetCode = async (req, res) => {
   try {
-    const { emailAddress, code } = req.body;
-    const user = await User.findOne({ emailAddress });
+    const { email, code } = req.body;
+    const user = await User.findOne({ email });
     const codeFromDb = await Code.findOne({ user: user._id });
     if (codeFromDb.code !== code) {
       logger.warn(`User ${user.username} provided incorrect reset code`);
@@ -288,17 +294,17 @@ exports.validateResetCode = async (req, res) => {
 };
 
 exports.changePassword = async (req, res) => {
-  const { emailAddress, password } = req.body;
+  const { email, password } = req.body;
 
   const cryptedPassword = await argon2.hash(password, 12);
   await User.findOneAndUpdate(
-    { emailAddress },
+    { email },
     {
       password: cryptedPassword,
     },
   );
   logger.info(
-    `Password changed successfully for user with email address ${emailAddress}`,
+    `Password changed successfully for user with email address ${email}`,
   );
   return res.status(200).json({ message: 'ok' });
 };
