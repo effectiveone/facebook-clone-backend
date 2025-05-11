@@ -6,12 +6,13 @@ const config = {
     process.env.DATABASE_URL || 'mongodb://localhost:27017/FacebookApplication',
 };
 
-const cloudinary = require('cloudinary');
+const cloudinary = require('cloudinary').v2;
 
 cloudinary.config({
-  cloud_name: process.env.CLOUD_NAME,
-  api_key: process.env.CLOUD_API_KEY,
-  api_secret: process.env.CLOUD_API_SECRET,
+  cloud_name: 'daw7honuh',
+  api_key: '999944164297519',
+  api_secret: 'idTtscKlOqWDVfqS_JqdalZxHSg',
+  secure: true,
 });
 
 module.exports = { config, cloudinary };

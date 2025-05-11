@@ -83,12 +83,19 @@ exports.updateProfilePicture = async (req, res) => {
 exports.updateCover = async (req, res) => {
   try {
     const { url } = req.body;
+    logger.info('Aktualizacja okładki dla użytkownika:', req.user.id);
+    logger.info('Nowy URL okładki:', url);
 
     const updatedUser = await User.findByIdAndUpdate(
       req.user.id,
       { cover: url },
       { new: true },
     ).select('-password');
+
+    if (!updatedUser) {
+      logger.error('Nie znaleziono użytkownika:', req.user.id);
+      return res.status(404).json({ message: 'Nie znaleziono użytkownika' });
+    }
 
     // Stwórz post z nowym zdjęciem okładki
     const newPost = new Post({
@@ -98,11 +105,15 @@ exports.updateCover = async (req, res) => {
     });
     await newPost.save();
 
+    logger.info('Okładka zaktualizowana pomyślnie:', {
+      userId: req.user.id,
+      coverUrl: url,
+    });
+
     res.json(updatedUser);
-    logger.info(`User ${req.user.id} updated cover successfully`);
   } catch (error) {
-    logger.error(`Error updating cover: ${error}`);
-    res.status(500).json({ message: 'Coś poszło nie tak' });
+    logger.error('Błąd podczas aktualizacji okładki:', error);
+    res.status(500).json({ message: error.message });
   }
 };
 

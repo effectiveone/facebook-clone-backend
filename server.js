@@ -36,11 +36,15 @@ readdirSync('./routes')
     (file) =>
       file !== 'friendInvitationRoutes.js' &&
       file !== 'testRegister.js' &&
-      file !== 'testLogin.js',
+      file !== 'testLogin.js' &&
+      file !== 'story.js',
   )
   .forEach((file) => {
     app.use('/', require('./routes/' + file));
   });
+  
+// Register story routes under /api to match frontend configuration
+app.use('/api/story', require('./routes/story'));
 app.use('/api/friend-invitation', friendInvitationRoutes);
 app.use('/', testRegisterRoutes);
 app.use('/', testLoginRoutes);
