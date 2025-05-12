@@ -12801,3 +12801,238 @@
 {"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 681a17881aa1743d4f67da10 przez 1 połączeń","service":"my-app","timestamp":"2025-05-11T19:02:25.927Z"}
 {"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2025-05-11T19:02:25.939Z"}
 {"level":"info","message":"Wysyłanie aktualizacji listy znajomych (2) do użytkownika 681a17881aa1743d4f67da10","service":"my-app","timestamp":"2025-05-11T19:02:25.978Z"}
+{"level":"info","message":"Server is running on port 8080","service":"my-app","timestamp":"2025-05-12T19:26:29.529Z"}
+{"level":"info","message":"Database connected successfully","service":"my-app","timestamp":"2025-05-12T19:26:29.561Z"}
+{"level":"error","message":"Błąd podczas aktualizacji oczekujących zaproszeń: Cast to ObjectId failed for value \"demo_1747077817602\" (type string) at path \"receiverId\" for model \"FriendInvitation\"","service":"my-app","timestamp":"2025-05-12T19:26:30.050Z"}
+{"level":"error","message":"Błąd podczas aktualizacji listy znajomych: Cast to ObjectId failed for value \"demo_1747077817602\" (type string) at path \"_id\" for model \"User\"","service":"my-app","timestamp":"2025-05-12T19:26:30.051Z"}
+{"level":"error","message":"Błąd podczas aktualizacji oczekujących zaproszeń: Cast to ObjectId failed for value \"demo_1747077767949\" (type string) at path \"receiverId\" for model \"FriendInvitation\"","service":"my-app","timestamp":"2025-05-12T19:26:30.061Z"}
+{"level":"error","message":"Błąd podczas aktualizacji listy znajomych: Cast to ObjectId failed for value \"demo_1747077767949\" (type string) at path \"_id\" for model \"User\"","service":"my-app","timestamp":"2025-05-12T19:26:30.062Z"}
+{"level":"info","message":"Test login attempt - full body: {\"email\":\"opcjaexclusivestyle@gmail.com\",\"password\":\"myBxez-savcoj-4vitjo\"}","service":"my-app","timestamp":"2025-05-12T19:26:37.781Z"}
+{"level":"warn","message":"User with email opcjaexclusivestyle@gmail.com not found","service":"my-app","timestamp":"2025-05-12T19:26:37.810Z"}
+{"level":"info","message":"Test login attempt - full body: {\"email\":\"opcjaexclusivestyle@gmail.com\",\"password\":\"myBxez-savcoj-4vitjo\"}","service":"my-app","timestamp":"2025-05-12T19:26:38.550Z"}
+{"level":"warn","message":"User with email opcjaexclusivestyle@gmail.com not found","service":"my-app","timestamp":"2025-05-12T19:26:38.555Z"}
+{"level":"info","message":"Test login attempt - full body: {\"email\":\"konrad.gruca90@gmail.com\",\"password\":\"szachy1\"}","service":"my-app","timestamp":"2025-05-12T19:26:47.203Z"}
+{"level":"info","message":"User found with id: 681a5dc1f1b998906bf5f97a","service":"my-app","timestamp":"2025-05-12T19:26:47.246Z"}
+{"level":"warn","message":"Invalid password for user konrad.gruca90@gmail.com","service":"my-app","timestamp":"2025-05-12T19:26:47.351Z"}
+{"level":"info","message":"Test login attempt - full body: {\"email\":\"konrad.gruca90@gmail.com\",\"password\":\"Szachy\"}","service":"my-app","timestamp":"2025-05-12T19:26:50.314Z"}
+{"level":"info","message":"User found with id: 681a5dc1f1b998906bf5f97a","service":"my-app","timestamp":"2025-05-12T19:26:50.323Z"}
+{"level":"warn","message":"Invalid password for user konrad.gruca90@gmail.com","service":"my-app","timestamp":"2025-05-12T19:26:50.397Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 681a17881aa1743d4f67da10 przez 1 połączeń","service":"my-app","timestamp":"2025-05-12T19:26:55.197Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (2) do użytkownika 681a17881aa1743d4f67da10","service":"my-app","timestamp":"2025-05-12T19:26:55.294Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2025-05-12T19:26:55.331Z"}
+{"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2025-05-12T19:26:55.392Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2025-05-12T19:26:55.826Z"}
+{"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2025-05-12T19:26:55.881Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 681a17881aa1743d4f67da10 przez 2 połączeń","service":"my-app","timestamp":"2025-05-12T19:26:55.894Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (2) do użytkownika 681a17881aa1743d4f67da10","service":"my-app","timestamp":"2025-05-12T19:26:55.902Z"}
+{"level":"info","message":"Test login attempt - full body: {\"email\":\"zeus@gmail.com\",\"password\":\"szachy2\"}","service":"my-app","timestamp":"2025-05-12T19:27:14.058Z"}
+{"level":"info","message":"User found with id: 681a17881aa1743d4f67da10","service":"my-app","timestamp":"2025-05-12T19:27:14.070Z"}
+{"level":"info","message":"Password verified successfully","service":"my-app","timestamp":"2025-05-12T19:27:14.150Z"}
+{"level":"info","message":"JWT token generated successfully","service":"my-app","timestamp":"2025-05-12T19:27:14.158Z"}
+{"level":"info","message":"User zeus@gmail.com successfully logged in","service":"my-app","timestamp":"2025-05-12T19:27:14.158Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 681a17881aa1743d4f67da10 przez 3 połączeń","service":"my-app","timestamp":"2025-05-12T19:27:14.214Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (2) do użytkownika 681a17881aa1743d4f67da10","service":"my-app","timestamp":"2025-05-12T19:27:14.220Z"}
+{"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2025-05-12T19:27:14.241Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2025-05-12T19:27:14.249Z"}
+{"level":"info","message":"Profile zeusjanowski799 retrieved successfully","service":"my-app","timestamp":"2025-05-12T19:27:15.959Z"}
+{"level":"error","message":"Error retrieving search history: StrictPopulateError: Cannot populate path `searches.user` because it is not in your schema. Set the `strictPopulate` option to false to override.","service":"my-app","timestamp":"2025-05-12T19:27:16.805Z"}
+{"level":"info","message":"User 681a17881aa1743d4f67da10 searched for konrad","service":"my-app","timestamp":"2025-05-12T19:27:23.009Z"}
+{"level":"error","message":"Error adding search to history: TypeError: Cannot read properties of undefined (reading 'find')","service":"my-app","timestamp":"2025-05-12T19:27:24.145Z"}
+{"level":"info","message":"Profile Konrad TytusGruca691 retrieved successfully","service":"my-app","timestamp":"2025-05-12T19:27:24.206Z"}
+{"level":"info","message":"Próba wysłania zaproszenia od 681a17881aa1743d4f67da10 do użytkownika z mailem konrad.gruca90@gmail.com","service":"my-app","timestamp":"2025-05-12T19:27:27.218Z"}
+{"level":"warn","message":"Użytkownicy 681a17881aa1743d4f67da10 i 681a5dc1f1b998906bf5f97a są już znajomymi","service":"my-app","timestamp":"2025-05-12T19:27:27.224Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2025-05-12T19:27:29.155Z"}
+{"level":"info","message":"Profile zeusjanowski799 retrieved successfully","service":"my-app","timestamp":"2025-05-12T19:27:35.907Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2025-05-12T19:27:41.066Z"}
+{"level":"info","message":"Test registration attempt - full body: {\"first_name\":\"kupa\",\"last_name\":\"kupa\",\"email\":\"kupa@gmail.com\",\"password\":\"kupa123\",\"bYear\":1994,\"bMonth\":5,\"bDay\":12,\"gender\":\"male\",\"username\":\"kupakupa554\"}","service":"my-app","timestamp":"2025-05-12T19:28:06.020Z"}
+{"level":"info","message":"Password hashed successfully","service":"my-app","timestamp":"2025-05-12T19:28:06.108Z"}
+{"level":"info","message":"Creating user with username: kupakupa554","service":"my-app","timestamp":"2025-05-12T19:28:06.108Z"}
+{"level":"info","message":"User saved successfully with id: 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T19:28:06.128Z"}
+{"level":"info","message":"Token generated successfully","service":"my-app","timestamp":"2025-05-12T19:28:06.130Z"}
+{"level":"info","message":"Registration completed successfully","service":"my-app","timestamp":"2025-05-12T19:28:06.130Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 68224bc6a687d6086f7e640f przez 1 połączeń","service":"my-app","timestamp":"2025-05-12T19:28:08.243Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (0) do użytkownika 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T19:28:08.246Z"}
+{"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2025-05-12T19:28:08.264Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2025-05-12T19:28:08.266Z"}
+{"level":"info","message":"New post created","service":"my-app","timestamp":"2025-05-12T19:28:15.356Z"}
+{"level":"info","message":"Profile kupakupa554 retrieved successfully","service":"my-app","timestamp":"2025-05-12T19:28:19.711Z"}
+{"level":"info","message":"Otrzymano żądanie uploadu obrazów","service":"my-app","timestamp":"2025-05-12T19:28:29.933Z"}
+{"level":"info","message":"Liczba plików:","service":"my-app","timestamp":"2025-05-12T19:28:29.935Z"}
+{"level":"info","message":"Ścieżka docelowa:","service":"my-app","timestamp":"2025-05-12T19:28:29.935Z"}
+{"level":"info","message":"Przetwarzanie pliku:","mimetype":"image/jpeg","service":"my-app","size":1569520,"timestamp":"2025-05-12T19:28:29.935Z"}
+{"level":"info","message":"Rozpoczynam upload do Cloudinary...","service":"my-app","timestamp":"2025-05-12T19:28:29.936Z"}
+{"api_key":"***","api_secret":"***","cloud_name":"dluxa1eie","level":"info","message":"Konfiguracja Cloudinary:","service":"my-app","timestamp":"2025-05-12T19:28:29.937Z"}
+{"format":"jpg","level":"info","message":"Upload do Cloudinary zakończony sukcesem:","public_id":"kupakupa554/cover_pictures/f9xuoqmykzxpm2wijmch","service":"my-app","size":1569520,"timestamp":"2025-05-12T19:28:32.226Z","url":"https://res.cloudinary.com/dluxa1eie/image/upload/v1747078111/kupakupa554/cover_pictures/f9xuoqmykzxpm2wijmch.jpg"}
+{"level":"info","message":"Uploaded image to Cloudinary: kupakupa554/cover_pictures/f9xuoqmykzxpm2wijmch","service":"my-app","timestamp":"2025-05-12T19:28:32.227Z"}
+{"level":"info","message":"Uploaded 1 image(s) to Cloudinary.","service":"my-app","timestamp":"2025-05-12T19:28:32.227Z"}
+{"level":"info","message":"Aktualizacja okładki dla użytkownika:","service":"my-app","timestamp":"2025-05-12T19:28:32.245Z"}
+{"level":"info","message":"Nowy URL okładki:","service":"my-app","timestamp":"2025-05-12T19:28:32.245Z"}
+{"coverUrl":"https://res.cloudinary.com/dluxa1eie/image/upload/v1747078111/kupakupa554/cover_pictures/f9xuoqmykzxpm2wijmch.jpg","level":"info","message":"Okładka zaktualizowana pomyślnie:","service":"my-app","timestamp":"2025-05-12T19:28:32.267Z","userId":"681a17881aa1743d4f67da10"}
+{"level":"info","message":"New post created","service":"my-app","timestamp":"2025-05-12T19:28:32.290Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (0) do użytkownika 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T19:28:32.302Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 68224bc6a687d6086f7e640f przez 2 połączeń","service":"my-app","timestamp":"2025-05-12T19:28:32.303Z"}
+{"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2025-05-12T19:28:32.311Z"}
+{"level":"info","message":"Otrzymano żądanie uploadu obrazów","service":"my-app","timestamp":"2025-05-12T19:28:39.710Z"}
+{"level":"info","message":"Liczba plików:","service":"my-app","timestamp":"2025-05-12T19:28:39.711Z"}
+{"level":"info","message":"Ścieżka docelowa:","service":"my-app","timestamp":"2025-05-12T19:28:39.712Z"}
+{"level":"info","message":"Przetwarzanie pliku:","mimetype":"image/jpeg","service":"my-app","size":36174,"timestamp":"2025-05-12T19:28:39.712Z"}
+{"level":"info","message":"Rozpoczynam upload do Cloudinary...","service":"my-app","timestamp":"2025-05-12T19:28:39.712Z"}
+{"api_key":"***","api_secret":"***","cloud_name":"dluxa1eie","level":"info","message":"Konfiguracja Cloudinary:","service":"my-app","timestamp":"2025-05-12T19:28:39.712Z"}
+{"format":"jpg","level":"info","message":"Upload do Cloudinary zakończony sukcesem:","public_id":"kupakupa554/profile_pictures/yl4pynajwf4dpc4skcfk","service":"my-app","size":36174,"timestamp":"2025-05-12T19:28:40.985Z","url":"https://res.cloudinary.com/dluxa1eie/image/upload/v1747078120/kupakupa554/profile_pictures/yl4pynajwf4dpc4skcfk.jpg"}
+{"level":"info","message":"Uploaded image to Cloudinary: kupakupa554/profile_pictures/yl4pynajwf4dpc4skcfk","service":"my-app","timestamp":"2025-05-12T19:28:40.986Z"}
+{"level":"info","message":"Uploaded 1 image(s) to Cloudinary.","service":"my-app","timestamp":"2025-05-12T19:28:40.986Z"}
+{"level":"info","message":"User 681a17881aa1743d4f67da10 updated profile picture successfully","service":"my-app","timestamp":"2025-05-12T19:28:41.024Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2025-05-12T19:28:42.865Z"}
+{"level":"info","message":"Profile kupakupa554 retrieved successfully","service":"my-app","timestamp":"2025-05-12T19:28:44.558Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 68224bc6a687d6086f7e640f przez 1 połączeń","service":"my-app","timestamp":"2025-05-12T19:28:46.089Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (0) do użytkownika 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T19:28:46.094Z"}
+{"level":"info","message":"Profile kupakupa554 retrieved successfully","service":"my-app","timestamp":"2025-05-12T19:28:46.103Z"}
+{"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2025-05-12T19:28:46.123Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2025-05-12T19:28:50.102Z"}
+{"level":"info","message":"Profile kupakupa554 retrieved successfully","service":"my-app","timestamp":"2025-05-12T19:28:55.099Z"}
+{"level":"info","message":"Otrzymano żądanie uploadu obrazów","service":"my-app","timestamp":"2025-05-12T19:29:02.498Z"}
+{"level":"info","message":"Liczba plików:","service":"my-app","timestamp":"2025-05-12T19:29:02.500Z"}
+{"level":"info","message":"Ścieżka docelowa:","service":"my-app","timestamp":"2025-05-12T19:29:02.501Z"}
+{"level":"info","message":"Przetwarzanie pliku:","mimetype":"image/jpeg","service":"my-app","size":36174,"timestamp":"2025-05-12T19:29:02.501Z"}
+{"level":"info","message":"Rozpoczynam upload do Cloudinary...","service":"my-app","timestamp":"2025-05-12T19:29:02.501Z"}
+{"api_key":"***","api_secret":"***","cloud_name":"dluxa1eie","level":"info","message":"Konfiguracja Cloudinary:","service":"my-app","timestamp":"2025-05-12T19:29:02.502Z"}
+{"format":"jpg","level":"info","message":"Upload do Cloudinary zakończony sukcesem:","public_id":"kupakupa554/profile_pictures/pmoj1ozlh3muiloxypzm","service":"my-app","size":36174,"timestamp":"2025-05-12T19:29:03.473Z","url":"https://res.cloudinary.com/dluxa1eie/image/upload/v1747078143/kupakupa554/profile_pictures/pmoj1ozlh3muiloxypzm.jpg"}
+{"level":"info","message":"Uploaded image to Cloudinary: kupakupa554/profile_pictures/pmoj1ozlh3muiloxypzm","service":"my-app","timestamp":"2025-05-12T19:29:03.474Z"}
+{"level":"info","message":"Uploaded 1 image(s) to Cloudinary.","service":"my-app","timestamp":"2025-05-12T19:29:03.475Z"}
+{"level":"info","message":"User 681a17881aa1743d4f67da10 updated profile picture successfully","service":"my-app","timestamp":"2025-05-12T19:29:03.515Z"}
+{"level":"info","message":"Otrzymano żądanie uploadu obrazów","service":"my-app","timestamp":"2025-05-12T19:29:16.221Z"}
+{"level":"info","message":"Liczba plików:","service":"my-app","timestamp":"2025-05-12T19:29:16.221Z"}
+{"level":"info","message":"Ścieżka docelowa:","service":"my-app","timestamp":"2025-05-12T19:29:16.222Z"}
+{"level":"info","message":"Przetwarzanie pliku:","mimetype":"image/jpeg","service":"my-app","size":1569520,"timestamp":"2025-05-12T19:29:16.222Z"}
+{"level":"info","message":"Rozpoczynam upload do Cloudinary...","service":"my-app","timestamp":"2025-05-12T19:29:16.222Z"}
+{"api_key":"***","api_secret":"***","cloud_name":"dluxa1eie","level":"info","message":"Konfiguracja Cloudinary:","service":"my-app","timestamp":"2025-05-12T19:29:16.222Z"}
+{"format":"jpg","level":"info","message":"Upload do Cloudinary zakończony sukcesem:","public_id":"kupakupa554/cover_pictures/tp76aaiwavejq8zjz0fp","service":"my-app","size":1569520,"timestamp":"2025-05-12T19:29:18.809Z","url":"https://res.cloudinary.com/dluxa1eie/image/upload/v1747078158/kupakupa554/cover_pictures/tp76aaiwavejq8zjz0fp.jpg"}
+{"level":"info","message":"Uploaded image to Cloudinary: kupakupa554/cover_pictures/tp76aaiwavejq8zjz0fp","service":"my-app","timestamp":"2025-05-12T19:29:18.810Z"}
+{"level":"info","message":"Uploaded 1 image(s) to Cloudinary.","service":"my-app","timestamp":"2025-05-12T19:29:18.811Z"}
+{"level":"info","message":"Aktualizacja okładki dla użytkownika:","service":"my-app","timestamp":"2025-05-12T19:29:18.834Z"}
+{"level":"info","message":"Nowy URL okładki:","service":"my-app","timestamp":"2025-05-12T19:29:18.835Z"}
+{"coverUrl":"https://res.cloudinary.com/dluxa1eie/image/upload/v1747078158/kupakupa554/cover_pictures/tp76aaiwavejq8zjz0fp.jpg","level":"info","message":"Okładka zaktualizowana pomyślnie:","service":"my-app","timestamp":"2025-05-12T19:29:18.850Z","userId":"681a17881aa1743d4f67da10"}
+{"level":"info","message":"New post created","service":"my-app","timestamp":"2025-05-12T19:29:18.870Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 68224bc6a687d6086f7e640f przez 2 połączeń","service":"my-app","timestamp":"2025-05-12T19:29:18.884Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (0) do użytkownika 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T19:29:18.885Z"}
+{"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2025-05-12T19:29:18.892Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2025-05-12T19:29:21.183Z"}
+{"level":"info","message":"Profile kupakupa554 retrieved successfully","service":"my-app","timestamp":"2025-05-12T19:29:31.680Z"}
+{"level":"info","message":"Test login attempt - full body: {\"email\":\"zeus@gmail.com\",\"password\":\"szachy2\"}","service":"my-app","timestamp":"2025-05-12T19:29:41.190Z"}
+{"level":"info","message":"User found with id: 681a17881aa1743d4f67da10","service":"my-app","timestamp":"2025-05-12T19:29:41.216Z"}
+{"level":"info","message":"Password verified successfully","service":"my-app","timestamp":"2025-05-12T19:29:41.302Z"}
+{"level":"info","message":"JWT token generated successfully","service":"my-app","timestamp":"2025-05-12T19:29:41.306Z"}
+{"level":"info","message":"User zeus@gmail.com successfully logged in","service":"my-app","timestamp":"2025-05-12T19:29:41.306Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 681a17881aa1743d4f67da10 przez 1 połączeń","service":"my-app","timestamp":"2025-05-12T19:29:41.362Z"}
+{"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2025-05-12T19:29:41.373Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (2) do użytkownika 681a17881aa1743d4f67da10","service":"my-app","timestamp":"2025-05-12T19:29:41.377Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2025-05-12T19:29:41.384Z"}
+{"level":"info","message":"Profile zeusjanowski799 retrieved successfully","service":"my-app","timestamp":"2025-05-12T19:29:48.089Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2025-05-12T19:29:56.459Z"}
+{"level":"info","message":"Profile zeusjanowski799 retrieved successfully","service":"my-app","timestamp":"2025-05-12T19:30:09.516Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2025-05-12T19:30:18.944Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2025-05-12T19:30:20.879Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2025-05-12T19:30:23.534Z"}
+{"level":"info","message":"Test login attempt - full body: {\"email\":\"konrad@gmail.com\",\"password\":\"szachy1\"}","service":"my-app","timestamp":"2025-05-12T19:30:38.871Z"}
+{"level":"info","message":"User found with id: 6817bfc94ae10a1a0db715d8","service":"my-app","timestamp":"2025-05-12T19:30:38.889Z"}
+{"level":"info","message":"Password verified successfully","service":"my-app","timestamp":"2025-05-12T19:30:38.956Z"}
+{"level":"info","message":"JWT token generated successfully","service":"my-app","timestamp":"2025-05-12T19:30:38.960Z"}
+{"level":"info","message":"User konrad@gmail.com successfully logged in","service":"my-app","timestamp":"2025-05-12T19:30:38.960Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 6817bfc94ae10a1a0db715d8 przez 1 połączeń","service":"my-app","timestamp":"2025-05-12T19:30:39.036Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2025-05-12T19:30:39.041Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (1) do użytkownika 6817bfc94ae10a1a0db715d8","service":"my-app","timestamp":"2025-05-12T19:30:39.044Z"}
+{"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2025-05-12T19:30:39.054Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2025-05-12T19:30:49.042Z"}
+{"level":"info","message":"Profile KonradGruca928 retrieved successfully","service":"my-app","timestamp":"2025-05-12T19:30:51.778Z"}
+{"level":"info","message":"Otrzymano żądanie uploadu obrazów","service":"my-app","timestamp":"2025-05-12T19:31:06.491Z"}
+{"level":"info","message":"Liczba plików:","service":"my-app","timestamp":"2025-05-12T19:31:06.492Z"}
+{"level":"info","message":"Ścieżka docelowa:","service":"my-app","timestamp":"2025-05-12T19:31:06.492Z"}
+{"level":"info","message":"Przetwarzanie pliku:","mimetype":"image/jpeg","service":"my-app","size":6052,"timestamp":"2025-05-12T19:31:06.492Z"}
+{"level":"info","message":"Rozpoczynam upload do Cloudinary...","service":"my-app","timestamp":"2025-05-12T19:31:06.492Z"}
+{"api_key":"***","api_secret":"***","cloud_name":"dluxa1eie","level":"info","message":"Konfiguracja Cloudinary:","service":"my-app","timestamp":"2025-05-12T19:31:06.493Z"}
+{"format":"jpg","level":"info","message":"Upload do Cloudinary zakończony sukcesem:","public_id":"KonradGruca928/cover_pictures/sxgzavt7ifaa8usdn9kb","service":"my-app","size":6052,"timestamp":"2025-05-12T19:31:07.549Z","url":"https://res.cloudinary.com/dluxa1eie/image/upload/v1747078267/KonradGruca928/cover_pictures/sxgzavt7ifaa8usdn9kb.jpg"}
+{"level":"info","message":"Uploaded image to Cloudinary: KonradGruca928/cover_pictures/sxgzavt7ifaa8usdn9kb","service":"my-app","timestamp":"2025-05-12T19:31:07.552Z"}
+{"level":"info","message":"Uploaded 1 image(s) to Cloudinary.","service":"my-app","timestamp":"2025-05-12T19:31:07.553Z"}
+{"level":"info","message":"Aktualizacja okładki dla użytkownika:","service":"my-app","timestamp":"2025-05-12T19:31:07.582Z"}
+{"level":"info","message":"Nowy URL okładki:","service":"my-app","timestamp":"2025-05-12T19:31:07.582Z"}
+{"coverUrl":"https://res.cloudinary.com/dluxa1eie/image/upload/v1747078267/KonradGruca928/cover_pictures/sxgzavt7ifaa8usdn9kb.jpg","level":"info","message":"Okładka zaktualizowana pomyślnie:","service":"my-app","timestamp":"2025-05-12T19:31:07.604Z","userId":"6817bfc94ae10a1a0db715d8"}
+{"level":"info","message":"New post created","service":"my-app","timestamp":"2025-05-12T19:31:07.627Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 6817bfc94ae10a1a0db715d8 przez 2 połączeń","service":"my-app","timestamp":"2025-05-12T19:31:07.646Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (1) do użytkownika 6817bfc94ae10a1a0db715d8","service":"my-app","timestamp":"2025-05-12T19:31:07.653Z"}
+{"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2025-05-12T19:31:07.660Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2025-05-12T19:31:08.577Z"}
+{"level":"info","message":"Test login attempt - full body: {\"email\":\"kupa@gmail.com\",\"password\":\"kupa123\"}","service":"my-app","timestamp":"2025-05-12T19:31:18.457Z"}
+{"level":"info","message":"User found with id: 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T19:31:18.488Z"}
+{"level":"info","message":"Password verified successfully","service":"my-app","timestamp":"2025-05-12T19:31:18.574Z"}
+{"level":"info","message":"JWT token generated successfully","service":"my-app","timestamp":"2025-05-12T19:31:18.577Z"}
+{"level":"info","message":"User kupa@gmail.com successfully logged in","service":"my-app","timestamp":"2025-05-12T19:31:18.578Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2025-05-12T19:31:18.635Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 68224bc6a687d6086f7e640f przez 3 połączeń","service":"my-app","timestamp":"2025-05-12T19:31:18.635Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (0) do użytkownika 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T19:31:18.636Z"}
+{"level":"info","message":"Retrieved all posts","service":"my-app","timestamp":"2025-05-12T19:31:18.640Z"}
+{"level":"info","message":"Profile kupakupa554 retrieved successfully","service":"my-app","timestamp":"2025-05-12T19:31:21.815Z"}
+{"level":"error","message":"Error retrieving search history: StrictPopulateError: Cannot populate path `searches.user` because it is not in your schema. Set the `strictPopulate` option to false to override.","service":"my-app","timestamp":"2025-05-12T19:31:25.911Z"}
+{"level":"info","message":"User 68224bc6a687d6086f7e640f searched for konrad","service":"my-app","timestamp":"2025-05-12T19:31:31.383Z"}
+{"level":"error","message":"Error adding search to history: TypeError: Cannot read properties of undefined (reading 'find')","service":"my-app","timestamp":"2025-05-12T19:31:33.260Z"}
+{"level":"info","message":"Profile Konrad TytusGruca691 retrieved successfully","service":"my-app","timestamp":"2025-05-12T19:31:33.313Z"}
+{"level":"error","message":"Error adding search to history: TypeError: Cannot read properties of undefined (reading 'find')","service":"my-app","timestamp":"2025-05-12T19:31:36.356Z"}
+{"level":"info","message":"Profile KonradGruca928 retrieved successfully","service":"my-app","timestamp":"2025-05-12T19:31:36.377Z"}
+{"level":"error","message":"Error adding search to history: TypeError: Cannot read properties of undefined (reading 'find')","service":"my-app","timestamp":"2025-05-12T19:31:39.418Z"}
+{"level":"info","message":"Profile konrad retrieved successfully","service":"my-app","timestamp":"2025-05-12T19:31:39.446Z"}
+{"level":"info","message":"Friends page information retrieved","service":"my-app","timestamp":"2025-05-12T19:31:44.220Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (0) do użytkownika 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T19:34:13.869Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 68224bc6a687d6086f7e640f przez 2 połączeń","service":"my-app","timestamp":"2025-05-12T19:34:13.872Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 681a17881aa1743d4f67da10 przez 1 połączeń","service":"my-app","timestamp":"2025-05-12T19:34:13.872Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (0) do użytkownika 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T19:34:13.875Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 68224bc6a687d6086f7e640f przez 2 połączeń","service":"my-app","timestamp":"2025-05-12T19:34:13.875Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (2) do użytkownika 681a17881aa1743d4f67da10","service":"my-app","timestamp":"2025-05-12T19:34:13.884Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (0) do użytkownika 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T19:34:13.903Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 6817bfc94ae10a1a0db715d8 przez 2 połączeń","service":"my-app","timestamp":"2025-05-12T19:34:13.907Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 68224bc6a687d6086f7e640f przez 3 połączeń","service":"my-app","timestamp":"2025-05-12T19:34:13.909Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (1) do użytkownika 6817bfc94ae10a1a0db715d8","service":"my-app","timestamp":"2025-05-12T19:34:13.920Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 6817bfc94ae10a1a0db715d8 przez 2 połączeń","service":"my-app","timestamp":"2025-05-12T19:34:13.925Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (1) do użytkownika 6817bfc94ae10a1a0db715d8","service":"my-app","timestamp":"2025-05-12T19:34:13.930Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 6817bfc94ae10a1a0db715d8 przez 2 połączeń","service":"my-app","timestamp":"2025-05-12T19:43:42.833Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (0) do użytkownika 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T19:43:42.837Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 68224bc6a687d6086f7e640f przez 3 połączeń","service":"my-app","timestamp":"2025-05-12T19:43:42.837Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 68224bc6a687d6086f7e640f przez 3 połączeń","service":"my-app","timestamp":"2025-05-12T19:43:42.837Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (0) do użytkownika 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T19:43:42.839Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 6817bfc94ae10a1a0db715d8 przez 2 połączeń","service":"my-app","timestamp":"2025-05-12T19:43:42.840Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (0) do użytkownika 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T19:43:42.853Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 68224bc6a687d6086f7e640f przez 3 połączeń","service":"my-app","timestamp":"2025-05-12T19:43:42.854Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (1) do użytkownika 6817bfc94ae10a1a0db715d8","service":"my-app","timestamp":"2025-05-12T19:43:42.855Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (1) do użytkownika 6817bfc94ae10a1a0db715d8","service":"my-app","timestamp":"2025-05-12T19:43:42.855Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 681a17881aa1743d4f67da10 przez 1 połączeń","service":"my-app","timestamp":"2025-05-12T19:43:42.874Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (2) do użytkownika 681a17881aa1743d4f67da10","service":"my-app","timestamp":"2025-05-12T19:43:42.883Z"}
+{"level":"info","message":"Próba połączenia z MongoDB...","service":"my-app","timestamp":"2025-05-12T19:53:06.411Z"}
+{"level":"info","message":"Server is running on port 8080 in undefined environment","service":"my-app","timestamp":"2025-05-12T19:53:06.445Z"}
+{"level":"info","message":"Połączono z MongoDB","service":"my-app","timestamp":"2025-05-12T19:53:06.463Z"}
+{"level":"info","message":"Database connected successfully to undefined environment","service":"my-app","timestamp":"2025-05-12T19:53:06.465Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 681a17881aa1743d4f67da10 przez 1 połączeń","service":"my-app","timestamp":"2025-05-12T19:53:07.091Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (0) do użytkownika 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T19:53:07.114Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 68224bc6a687d6086f7e640f przez 2 połączeń","service":"my-app","timestamp":"2025-05-12T19:53:07.117Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 6817bfc94ae10a1a0db715d8 przez 2 połączeń","service":"my-app","timestamp":"2025-05-12T19:53:07.123Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (0) do użytkownika 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T19:53:07.128Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 68224bc6a687d6086f7e640f przez 2 połączeń","service":"my-app","timestamp":"2025-05-12T19:53:07.130Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (2) do użytkownika 681a17881aa1743d4f67da10","service":"my-app","timestamp":"2025-05-12T19:53:07.152Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (1) do użytkownika 6817bfc94ae10a1a0db715d8","service":"my-app","timestamp":"2025-05-12T19:53:07.153Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 6817bfc94ae10a1a0db715d8 przez 2 połączeń","service":"my-app","timestamp":"2025-05-12T19:53:07.170Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (1) do użytkownika 6817bfc94ae10a1a0db715d8","service":"my-app","timestamp":"2025-05-12T19:53:07.173Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (0) do użytkownika 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T19:53:11.963Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 68224bc6a687d6086f7e640f przez 3 połączeń","service":"my-app","timestamp":"2025-05-12T19:53:11.973Z"}
+{"level":"info","message":"Próba połączenia z MongoDB...","service":"my-app","timestamp":"2025-05-12T19:53:17.323Z"}
+{"level":"info","message":"Server is running on port 8080 in undefined environment","service":"my-app","timestamp":"2025-05-12T19:53:17.351Z"}
+{"level":"info","message":"Połączono z MongoDB","service":"my-app","timestamp":"2025-05-12T19:53:17.370Z"}
+{"level":"info","message":"Database connected successfully to undefined environment","service":"my-app","timestamp":"2025-05-12T19:53:17.375Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 68224bc6a687d6086f7e640f przez 2 połączeń","service":"my-app","timestamp":"2025-05-12T19:53:19.093Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (0) do użytkownika 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T19:53:19.127Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (0) do użytkownika 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T19:53:19.133Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 68224bc6a687d6086f7e640f przez 2 połączeń","service":"my-app","timestamp":"2025-05-12T19:53:19.136Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 6817bfc94ae10a1a0db715d8 przez 1 połączeń","service":"my-app","timestamp":"2025-05-12T19:53:19.177Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (1) do użytkownika 6817bfc94ae10a1a0db715d8","service":"my-app","timestamp":"2025-05-12T19:53:19.245Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 68224bc6a687d6086f7e640f przez 3 połączeń","service":"my-app","timestamp":"2025-05-12T19:53:19.257Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (0) do użytkownika 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T19:53:19.261Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 6817bfc94ae10a1a0db715d8 przez 2 połączeń","service":"my-app","timestamp":"2025-05-12T19:53:19.272Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (1) do użytkownika 6817bfc94ae10a1a0db715d8","service":"my-app","timestamp":"2025-05-12T19:53:19.293Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 681a17881aa1743d4f67da10 przez 1 połączeń","service":"my-app","timestamp":"2025-05-12T19:53:19.304Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (2) do użytkownika 681a17881aa1743d4f67da10","service":"my-app","timestamp":"2025-05-12T19:53:19.314Z"}
