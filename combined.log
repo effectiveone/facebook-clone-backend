@@ -13036,3 +13036,30 @@
 {"level":"info","message":"Wysyłanie aktualizacji listy znajomych (1) do użytkownika 6817bfc94ae10a1a0db715d8","service":"my-app","timestamp":"2025-05-12T19:53:19.293Z"}
 {"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 681a17881aa1743d4f67da10 przez 1 połączeń","service":"my-app","timestamp":"2025-05-12T19:53:19.304Z"}
 {"level":"info","message":"Wysyłanie aktualizacji listy znajomych (2) do użytkownika 681a17881aa1743d4f67da10","service":"my-app","timestamp":"2025-05-12T19:53:19.314Z"}
+{"level":"info","message":"Always using DEMO mode for login due to database issues","service":"my-app","timestamp":"2025-05-12T20:00:54.609Z"}
+{"level":"error","message":"Błąd podczas aktualizacji oczekujących zaproszeń: Cast to ObjectId failed for value \"demo_1747080054616\" (type string) at path \"receiverId\" for model \"FriendInvitation\"","service":"my-app","timestamp":"2025-05-12T20:00:54.794Z"}
+{"level":"error","message":"Błąd podczas aktualizacji listy znajomych: Cast to ObjectId failed for value \"demo_1747080054616\" (type string) at path \"_id\" for model \"User\"","service":"my-app","timestamp":"2025-05-12T20:00:54.797Z"}
+{"level":"warn","message":"Profile with username user_054649 does not exist","service":"my-app","timestamp":"2025-05-12T20:00:58.955Z"}
+{"level":"info","message":"Always using DEMO mode for login due to database issues","service":"my-app","timestamp":"2025-05-12T20:01:33.615Z"}
+{"level":"error","message":"Błąd podczas aktualizacji oczekujących zaproszeń: Cast to ObjectId failed for value \"demo_1747080093618\" (type string) at path \"receiverId\" for model \"FriendInvitation\"","service":"my-app","timestamp":"2025-05-12T20:01:33.699Z"}
+{"level":"error","message":"Błąd podczas aktualizacji listy znajomych: Cast to ObjectId failed for value \"demo_1747080093618\" (type string) at path \"_id\" for model \"User\"","service":"my-app","timestamp":"2025-05-12T20:01:33.700Z"}
+{"level":"info","message":"Próba połączenia z MongoDB...","service":"my-app","timestamp":"2025-05-12T20:07:02.501Z"}
+{"level":"info","message":"Server is running on port 8080 in undefined environment","service":"my-app","timestamp":"2025-05-12T20:07:02.643Z"}
+{"level":"info","message":"Połączono z MongoDB","service":"my-app","timestamp":"2025-05-12T20:07:02.746Z"}
+{"level":"info","message":"Database connected successfully to undefined environment","service":"my-app","timestamp":"2025-05-12T20:07:02.752Z"}
+{"level":"error","message":"Błąd podczas aktualizacji oczekujących zaproszeń: Cast to ObjectId failed for value \"demo_1747080093618\" (type string) at path \"receiverId\" for model \"FriendInvitation\"","service":"my-app","timestamp":"2025-05-12T20:07:03.055Z"}
+{"level":"error","message":"Błąd podczas aktualizacji listy znajomych: Cast to ObjectId failed for value \"demo_1747080093618\" (type string) at path \"_id\" for model \"User\"","service":"my-app","timestamp":"2025-05-12T20:07:03.055Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 6817bfc94ae10a1a0db715d8 przez 1 połączeń","service":"my-app","timestamp":"2025-05-12T20:07:03.101Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (1) do użytkownika 6817bfc94ae10a1a0db715d8","service":"my-app","timestamp":"2025-05-12T20:07:03.159Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 68224bc6a687d6086f7e640f przez 1 połączeń","service":"my-app","timestamp":"2025-05-12T20:07:03.180Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (0) do użytkownika 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T20:07:03.183Z"}
+{"level":"error","message":"Błąd podczas aktualizacji oczekujących zaproszeń: Cast to ObjectId failed for value \"demo_1747080054616\" (type string) at path \"receiverId\" for model \"FriendInvitation\"","service":"my-app","timestamp":"2025-05-12T20:07:03.927Z"}
+{"level":"error","message":"Błąd podczas aktualizacji listy znajomych: Cast to ObjectId failed for value \"demo_1747080054616\" (type string) at path \"_id\" for model \"User\"","service":"my-app","timestamp":"2025-05-12T20:07:03.930Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 68224bc6a687d6086f7e640f przez 3 połączeń","service":"my-app","timestamp":"2025-05-12T20:07:03.950Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (0) do użytkownika 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T20:07:03.956Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 68224bc6a687d6086f7e640f przez 3 połączeń","service":"my-app","timestamp":"2025-05-12T20:07:03.958Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (0) do użytkownika 68224bc6a687d6086f7e640f","service":"my-app","timestamp":"2025-05-12T20:07:03.959Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 681a17881aa1743d4f67da10 przez 1 połączeń","service":"my-app","timestamp":"2025-05-12T20:07:03.999Z"}
+{"level":"info","message":"Wysyłanie aktualizacji zaproszeń do użytkownika 6817bfc94ae10a1a0db715d8 przez 2 połączeń","service":"my-app","timestamp":"2025-05-12T20:07:04.006Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (2) do użytkownika 681a17881aa1743d4f67da10","service":"my-app","timestamp":"2025-05-12T20:07:04.015Z"}
+{"level":"info","message":"Wysyłanie aktualizacji listy znajomych (1) do użytkownika 6817bfc94ae10a1a0db715d8","service":"my-app","timestamp":"2025-05-12T20:07:04.041Z"}

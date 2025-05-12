@@ -14,16 +14,18 @@ const logger = require('./logger');
 const app = express();
 
 // CORS - najprostsza możliwa konfiguracja - zezwala na wszystko
-app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'http://localhost:3001',
-    'http://127.0.0.1:3000',
-    'http://127.0.0.1:3001',
-    'https://dapper-meerkat-651fdc.netlify.app',
-  ],
-  credentials: true,
-}));
+app.use(
+  cors({
+    origin: [
+      'http://localhost:3000',
+      'http://localhost:3001',
+      'http://127.0.0.1:3000',
+      'http://127.0.0.1:3001',
+      'https://dapper-meerkat-651fdc.netlify.app',
+    ],
+    credentials: true,
+  }),
+);
 
 app.use(express.json());
 app.use(
@@ -97,6 +99,59 @@ app.get('/demo-token', (req, res) => {
       .status(500)
       .json({ message: `Błąd tworzenia tokenu: ${error.message}` });
   }
+});
+
+// Endpoint zwracający skrypt proxy Socket.io
+app.get('/socket-io-proxy.js', (req, res) => {
+  res.setHeader('Content-Type', 'application/javascript');
+
+  const productionSocketUrl =
+    'https://facebook-clone-backend-p1ds.onrender.com';
+
+  const script = `
+  (function() {
+    // Oryginalne definicje XMLHttpRequest i WebSocket
+    const originalXHR = window.XMLHttpRequest;
+    const originalWS = window.WebSocket;
+    
+    // Proxy dla XMLHttpRequest
+    window.XMLHttpRequest = function() {
+      const xhr = new originalXHR();
+      const originalOpen = xhr.open;
+      
+      xhr.open = function(method, url, ...args) {
+        // Sprawdź, czy to żądanie do Socket.io na localhost
+        if (url && url.toString().includes('localhost:8080/socket.io')) {
+          // Zamień localhost na adres produkcyjny
+          const newUrl = url.toString().replace('http://localhost:8080', '${productionSocketUrl}');
+          console.log('Przekierowano Socket.io XHR z:', url, 'na:', newUrl);
+          return originalOpen.call(this, method, newUrl, ...args);
+        }
+        return originalOpen.call(this, method, url, ...args);
+      };
+      
+      return xhr;
+    };
+    
+    // Proxy dla WebSocket
+    window.WebSocket = function(url, protocols) {
+      if (url && url.toString().includes('localhost:8080/socket.io')) {
+        // Zamień localhost na adres produkcyjny
+        const newUrl = url.toString().replace('ws://localhost:8080', '${productionSocketUrl.replace(
+          'http',
+          'ws',
+        )}');
+        console.log('Przekierowano Socket.io WebSocket z:', url, 'na:', newUrl);
+        return new originalWS(newUrl, protocols);
+      }
+      return new originalWS(url, protocols);
+    };
+    
+    console.log('Socket.io proxy załadowany - przekierowuje połączenia z localhost:8080 na ${productionSocketUrl}');
+  })();
+  `;
+
+  res.status(200).send(script);
 });
 
 // Register story routes under /api to match frontend configuration
